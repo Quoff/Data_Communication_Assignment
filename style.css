@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7fb;
+  color: #222;
+  line-height: 1.8;
+}
+
+/* HEADER */
+.site-header {
+  background-color: #071d35;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.navbar {
+  width: 94%;
+  max-width: 1500px;
+  margin: auto;
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00c2ff;
+}
+
+/* NAVIGATION */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #00c2ff;
+}
+
+.nav-links a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #00c2ff;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 90vh;
+  background:
+    linear-gradient(rgba(7, 29, 53, 0.85), rgba(0, 119, 182, 0.75)),
+    url("images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 50px 20px;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 22px;
+  margin-bottom: 35px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  background-color: #00c2ff;
+  color: #071d35;
+  padding: 15px 32px;
+  border-radius: 35px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  transform: translateY(-3px);
+}
+
+/* GENERAL SECTION */
+.section {
+  padding: 90px 0;
+  background-color: white;
+}
+
+.light-section {
+  background-color: #eef5fb;
+}
+
+.container {
+  width: 94%;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 40px;
+  color: #071d35;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #00c2ff;
+  display: block;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* ABOUT SECTION */
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.profile-img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 5px solid #00c2ff;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card {
+  width: 100%;
+  background-color: #ffffff;
+  color: #222;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #00c2ff;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #071d35;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.card p {
+  color: #444;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* IMAGE SECTION */
+.image-box {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* INSPIRATION */
+.inspiration {
+  background: linear-gradient(to right, #fff8e1, #ffffff);
+}
+
+/* VIDEO */
+.video-box {
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-box iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+}
+
+/* RESOURCES */
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resource-links a {
+  background-color: #071d35;
+  color: white;
+  text-decoration: none;
+  padding: 16px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  width: fit-content;
+}
+
+.resource-links a:hover {
+  background-color: #00c2ff;
+  color: #071d35;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #071d35;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* TABLET */
+@media screen and (max-width: 900px) {
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .section h2 {
+    font-size: 32px;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 700px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background-color: #071d35;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 25px 0;
+    gap: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .card h3 {
+    font-size: 23px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  .resource-links a {
+    width: 100%;
+    text-align: center;
+  }
+}
